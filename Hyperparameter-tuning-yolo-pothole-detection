@@ -248,6 +248,128 @@ def evaluate_model(model, data_yaml):
 # Function to tune hyperparameters
 def tune_hyperparameters(model, data_yaml):
     print("Starting hyperparameter tuning...")
+
+
+
+
+ #Example 1 – Standard setup for general use
+
+model.tune(
+    data=data_yaml,
+    epochs=20,
+    iterations=30,
+    imgsz=640,
+    project="runs/pothole_tune",
+    name="autopothole_std",
+    exist_ok=True
+)
+.
+
+#Example 2 – High-resolution input for detecting small or distant potholes
+model.tune(
+    data=data_yaml,
+    epochs=25,
+    iterations=40,
+    imgsz=1024,
+    project="runs/pothole_highres",
+    name="autopothole_highres",
+    exist_ok=True
+)
+
+
+
+#⚡ Example 3 – Lightweight tuning for fast testing
+model.tune(
+    data=data_yaml,
+    epochs=5,
+    iterations=10,
+    imgsz=416,
+    project="runs/pothole_fast",
+    name="autopothole_fasttest",
+    exist_ok=True
+)
+
+
+
+#🧪 Example 4 – Experimental setup for different urban road conditions
+
+
+
+model.tune(
+    data=data_yaml,
+    epochs=30,
+    iterations=50,
+    imgsz=800,
+    project="runs/pothole_experiment",
+    name="autopothole_exp_urban",
+    exist_ok=True
+)
+
+
+
+
+#🚗 Example 5 – Targeting small potholes on highways
+model.tune(
+    data=data_yaml,
+    epochs=40,
+    iterations=25,
+    imgsz=1280,
+    project="runs/pothole_highway",
+    name="autopothole_highway",
+    exist_ok=True
+)
+
+
+
+
+#🧠 Example 6 – Extended tuning for robust performance
+model.tune(
+    data=data_yaml,
+    epochs=50,
+    iterations=70,
+    imgsz=640,
+    project="runs/pothole_robust",
+    name="autopothole_strong",
+    exist_ok=True
+)
+
+
+
+🧩 Example 7 – Adaptive tuning for mixed asphalt and concrete surfaces
+
+#model.tune(
+    data=data_yaml,
+    epochs=20,
+    iterations=45,
+    imgsz=768,
+    project="runs/pothole_mixedsurfaces",
+    name="autopothole_mix",
+    exist_ok=True
+)
+#⏱️ Example 8 – Very fast prototyping during field deployment
+model.tune(
+    data=data_yaml,
+    epochs=2,
+    iterations=5,
+    imgsz=320,
+    project="runs/pothole_quick",
+    name="autopothole_proto",
+    exist_ok=True
+)
+#🌧️ Example 9 – Specialized tuning for rainy or low-light conditions
+
+model.tune(
+    data=data_yaml,
+    epochs=35,
+    iterations=60,
+    imgsz=960,
+    project="runs/pothole_weather",
+    name="autopothole_rainy",
+    exist_ok=True
+)
+
+
+
     model.tune(
         data=data_yaml,
         epochs=10,                   # epochs for tuning

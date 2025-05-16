@@ -370,6 +370,19 @@ model.tune(
 
 
 
+######################best performing parameter################################
+model.tune(
+    data=data_yaml,
+    epochs=30,               # enough to optimize weights
+    iterations=50,           # sufficient hyperparameter search
+    imgsz=1024,              # large enough to detect small/faint potholes
+    project="runs/pothole_best",
+    name="autopothole_best_model",
+    exist_ok=True
+)
+
+
+
     model.tune(
         data=data_yaml,
         epochs=10,                   # epochs for tuning

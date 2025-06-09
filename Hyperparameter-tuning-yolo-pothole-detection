@@ -394,6 +394,121 @@ model.tune(
     )
     print("Hyperparameter tuning complete!")
 
+
+
+
+
+# 🛰️ Example 10 – Satellite or drone-based detection with very high resolution
+model.tune(
+    data=data_yaml,
+    epochs=45,
+    iterations=60,
+    imgsz=1536,
+    project="runs/pothole_satellite",
+    name="autopothole_droneview",
+    exist_ok=True
+)
+
+# 📱 Example 11 – Tuning for mobile deployment with size constraints
+model.tune(
+    data=data_yaml,
+    epochs=12,
+    iterations=18,
+    imgsz=480,
+    project="runs/pothole_mobile",
+    name="autopothole_mobileopt",
+    exist_ok=True
+)
+
+# 🧱 Example 12 – Industrial or parking lot potholes with concrete and mixed terrain
+model.tune(
+    data=data_yaml,
+    epochs=20,
+    iterations=32,
+    imgsz=896,
+    project="runs/pothole_parking",
+    name="autopothole_industrial",
+    exist_ok=True
+)
+
+# 🔄 Example 13 – Transfer learning from related road defect datasets
+model.tune(
+    data=data_yaml,
+    epochs=35,
+    iterations=55,
+    imgsz=960,
+    project="runs/pothole_transfer",
+    name="autopothole_transferlearn",
+    exist_ok=True
+)
+
+# 🌐 Example 14 – Global dataset with region-specific characteristics
+model.tune(
+    data=data_yaml,
+    epochs=30,
+    iterations=50,
+    imgsz=832,
+    project="runs/pothole_global",
+    name="autopothole_multiregion",
+    exist_ok=True
+)
+
+# 🌨️ Example 15 – Snow-covered or muddy road detection
+model.tune(
+    data=data_yaml,
+    epochs=40,
+    iterations=60,
+    imgsz=960,
+    project="runs/pothole_snowmud",
+    name="autopothole_snowmud",
+    exist_ok=True
+)
+
+# 🛣️ Example 16 – Narrow and rural roads with low contrast
+model.tune(
+    data=data_yaml,
+    epochs=25,
+    iterations=40,
+    imgsz=704,
+    project="runs/pothole_rural",
+    name="autopothole_lowcontrast",
+    exist_ok=True
+)
+
+# 🚕 Example 17 – Urban taxi zones with complex markings and occlusions
+model.tune(
+    data=data_yaml,
+    epochs=30,
+    iterations=48,
+    imgsz=896,
+    project="runs/pothole_urban",
+    name="autopothole_taxiurban",
+    exist_ok=True
+)
+
+# 📦 Example 18 – Lightweight deployment for edge devices
+model.tune(
+    data=data_yaml,
+    epochs=8,
+    iterations=12,
+    imgsz=384,
+    project="runs/pothole_edge",
+    name="autopothole_edgeai",
+    exist_ok=True
+)
+
+# 🏗️ Example 19 – Construction zones with non-standard surfaces
+model.tune(
+    data=data_yaml,
+    epochs=22,
+    iterations=36,
+    imgsz=768,
+    project="runs/pothole_construction",
+    name="autopothole_workzone",
+    exist_ok=True
+)
+
+
 if __name__ == "__main__":
     # To Verify that data.yaml exists
     if not os.path.exists(data_yaml):

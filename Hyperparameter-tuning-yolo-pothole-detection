@@ -687,6 +687,26 @@ batch_sizes = [random.choice(range(2, 30, 2)) for _ in range(40)]  # 40 batch si
 learning_rates = [random.uniform(0.0001, 0.02) for _ in range(40)]  # 40 learning rates
 weight_decays = [random.uniform(0.00001, 0.001) for _ in range(40)]  # 40 weight decay values
 
+
+
+
+
+import random
+
+# Generate 100 batch sizes between 2 and 64, step by 2 (even numbers)
+batch_sizes = [random.choice(range(2, 66, 2)) for _ in range(100)]
+
+# Generate 100 learning rates between 0.00005 and 0.05
+learning_rates = [random.uniform(0.00005, 0.05) for _ in range(100)]
+
+# Generate 100 weight decay values between 0.000001 and 0.01
+weight_decays = [random.uniform(0.000001, 0.01) for _ in range(100)]
+
+# Optional: Round values for consistency (e.g., to 5 decimal places)
+learning_rates = [round(lr, 5) for lr in learning_rates]
+weight_decays = [round(wd, 6) for wd in weight_decays]
+
+
 # Store results
 results = []
 
